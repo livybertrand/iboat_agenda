@@ -1,0 +1,32 @@
+<p>
+  <strong>Title:</strong>
+  <%= @soiree.title %>
+</p>
+
+<p>
+  <strong>Date event:</strong>
+  <%= @soiree.date_event %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @soiree.picture %>
+</p>
+
+<p>
+  <strong>Time event:</strong>
+  <%= @soiree.time_event %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @soiree.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @soiree.description %>
+</p>
+
+<%= link_to 'Edit', edit_soiree_path(@soiree) %> |
+<%= link_to 'Back', soirees_path %>

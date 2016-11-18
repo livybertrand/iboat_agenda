@@ -1,0 +1,1 @@
+json.partial! "soirees/soiree", soiree: @soiree

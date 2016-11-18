@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<h1> <span>Iboat |</span> Agenda </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date event</th>
+      <th>Picture</th>
+      <th>Time event</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @soirees.each do |soiree| %>
+      <tr>
+        <td><%= soiree.title %></td>
+        <td><%= soiree.date_event %></td>
+        <td><%= soiree.picture %></td>
+        <td><%= soiree.time_event %></td>
+        <td><%= soiree.price %></td>
+        <td><%= soiree.description %></td>
+        <td><%= link_to 'Voir', soiree %></td>
+        <td><%= link_to 'Modifier', edit_soiree_path(soiree) %></td>
+        <td><%= link_to 'Supprimer', soiree, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Ajouter une nouvelle soirée', new_soiree_path %>
