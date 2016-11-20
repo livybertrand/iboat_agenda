@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+<div class="form">
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -19,6 +20,7 @@
     <%= f.label :date_event %><br>
     <%= f.date_select :date_event %>
   </div>
+
   <div class="field">
     <%= f.label :picture %><br>
     <%= f.text_field :picture %>
@@ -38,4 +40,6 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
+
 <% end %>

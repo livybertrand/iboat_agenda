@@ -1,6 +1,5 @@
 body {
   background-color: #fff;
-  color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -32,6 +31,12 @@ div {
   padding: 2px;
   background-color: red;
   display: table;
+}
+
+.form {
+  max-width: 90%;
+  background-color: #191919;
+  text-transform: uppercase;
 }
 
 

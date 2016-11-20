@@ -28,7 +28,7 @@ class SoireesController < ApplicationController
 
     respond_to do |format|
       if @soiree.save
-        format.html { redirect_to @soiree, notice: 'Soiree was successfully created.' }
+        format.html { redirect_to @soiree, notice: 'Votre évènement a bien été créé.' }
         format.json { render :show, status: :created, location: @soiree }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class SoireesController < ApplicationController
   def update
     respond_to do |format|
       if @soiree.update(soiree_params)
-        format.html { redirect_to @soiree, notice: 'Soiree was successfully updated.' }
+        format.html { redirect_to @soiree, notice: 'Votre évènement a bien été mis à jour.' }
         format.json { render :show, status: :ok, location: @soiree }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class SoireesController < ApplicationController
   def destroy
     @soiree.destroy
     respond_to do |format|
-      format.html { redirect_to soirees_url, notice: 'Soiree was successfully destroyed.' }
+      format.html { redirect_to soirees_url, notice: 'Votre évènement a bien été supprimé.' }
       format.json { head :no_content }
     end
   end

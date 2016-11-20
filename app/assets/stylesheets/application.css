@@ -15,12 +15,30 @@
 
  */
 
+body {
+      /*background: rgba(199,255,255,1);
+    background: -moz-linear-gradient(left, rgba(199,255,255,1) 0%, rgba(251,238,255,1) 40%, rgba(251,238,255,1) 47%, rgba(251,238,255,1) 54%, rgba(246,227,255,1) 67%, rgba(235,198,255,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(199,255,255,1)), color-stop(40%, rgba(251,238,255,1)), color-stop(47%, rgba(251,238,255,1)), color-stop(54%, rgba(251,238,255,1)), color-stop(67%, rgba(246,227,255,1)), color-stop(100%, rgba(235,198,255,1)));
+    background: -webkit-linear-gradient(left, rgba(199,255,255,1) 0%, rgba(251,238,255,1) 40%, rgba(251,238,255,1) 47%, rgba(251,238,255,1) 54%, rgba(246,227,255,1) 67%, rgba(235,198,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(199,255,255,1) 0%, rgba(251,238,255,1) 40%, rgba(251,238,255,1) 47%, rgba(251,238,255,1) 54%, rgba(246,227,255,1) 67%, rgba(235,198,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(199,255,255,1) 0%, rgba(251,238,255,1) 40%, rgba(251,238,255,1) 47%, rgba(251,238,255,1) 54%, rgba(246,227,255,1) 67%, rgba(235,198,255,1) 100%);
+    background: linear-gradient(to right, rgba(199,255,255,1) 0%, rgba(251,238,255,1) 40%, rgba(251,238,255,1) 47%, rgba(251,238,255,1) 54%, rgba(246,227,255,1) 67%, rgba(235,198,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7ffff', endColorstr='#ebc6ff', GradientType=1 );*/
+    background: #74e3ec; /* Old Browsers */
+    background: -webkit-linear-gradient(top right,#74e3ec,#c7ffe2); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top right,#74e3ec,#c7ffe2); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top right,#74e3ec,#c7ffe2); /*Fx 3.6-15*/
+    background: linear-gradient(top right, #74e3ec, #c7ffe2); /*Standard*/
+}
 
 
 nav {
-  background-color: black;
+  background-color: #191919;
   height: 70px;
   display: flex;
+  color: white;
+  position: relative;
+  box-shadow: 0px 3px 20px #888888;
 }
 
 nav a {
@@ -34,7 +52,7 @@ nav a {
 }
 
 nav ul {
-  margin-top: 10px;
+  margin-top: 15px;
   list-style: none;
   display: table;
 }
@@ -65,4 +83,79 @@ nav a:after {
 nav a:hover:after {
   width: 100%;
   left: 0;
+}
+
+.connexion {
+  display: flex;
+  width: 400px;
+  height: 70px;
+  position: absolute;
+  right: 0;
+}
+
+.connexion a {
+  align-self: center;
+}
+
+.connexion a:hover {
+  color:#D1D1D1;
+}
+
+.connexion a:hover:after {
+  width: 0%;
+}
+
+h1 {
+  font-size: 25px;
+  margin-left: 30px;
+  font-family: 'Helvetica Neue';
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  vertical-align: top;
+  padding: 30px;
+}
+
+.wrapper {
+  max-width: 90%;
+  display: flex;
+  vertical-align: bottom;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: auto;
+  align-content: flex-start;
+  align-items: flex-start;
+
+}
+
+.wrapper > div .button {
+  margin: 5px 0 5px 0;
+  padding: 5px;
+  width: 90px;
+  font-size: 10px;
+}
+
+
+
+.new {
+  margin-left: 0px;
+  margin-bottom: 70px;
+}
+
+@media all and (max-width: 800px) {
+  .wrapper {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: center;
+  }
+  .button {
+    margin: auto;
+  }
+
+  .new {
+    max-width: 70%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
 }
